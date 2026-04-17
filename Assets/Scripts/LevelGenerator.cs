@@ -4,7 +4,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     [Header("Generation Settings")]    
-    public int ClusterCount = 10;    
+    public int ClusterCount = 10;
     public int CoreProtectionRadius = 3;
 
     private GridManager _grid;
@@ -14,7 +14,7 @@ public class LevelGenerator : MonoBehaviour
     {
         _grid = GridManager.Instance;
         _corePosition = new Vector2Int(_grid.Width / 2, _grid.Height / 2);
-        
+
         // for testing
         PopulateResources(System.DateTime.Now.Millisecond);
     }
@@ -68,7 +68,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
     public void ClearLevel()
-    {        
-        _grid.InitializeGrid();     
+    {
+        _grid.InitializeGrid();
     }
 }

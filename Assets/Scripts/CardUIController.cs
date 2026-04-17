@@ -58,12 +58,17 @@ public class CardUIController : MonoBehaviour
         {
             if (i >= _cardPool.Count) {
                 Debug.LogWarning("[CardUIController] Hand size exceeds Pool size!");
-                break; 
+                break;
             }
 
             GameObject cardObj = _cardPool[i];
-            cardObj.SetActive(true);            
-            cardObj.name = currentHand[i].CardName;            
+            cardObj.SetActive(true);
+
+            CardVisual visual = cardObj.GetComponent<CardVisual>();
+            if (visual != null)
+            {
+                visual.SetupCard(currentHand[i]);
+            }            
         }
     }
     

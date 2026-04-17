@@ -37,12 +37,11 @@ public class ResourceManager : MonoBehaviour
             return;
         }
         Instance = this;        
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); 
 
         // Testing
         AddCredits(500);
         UpdatePowerCapacity(100);
-
         
         foreach (ResourceType type in Enum.GetValues(typeof(ResourceType)))
         {
@@ -73,7 +72,7 @@ public class ResourceManager : MonoBehaviour
         Credits += amount;
         OnCreditsChanged?.Invoke(Credits);
     }
-   
+    
     public void UpdatePowerCapacity(int capacityDelta)
     {
         MaxPower += capacityDelta;
