@@ -6,8 +6,8 @@ public class CardData : ScriptableObject
     [Header("Card Identity")]
     public string CardName;
     [TextArea(2, 4)] public string Description;
-    public Sprite CardIcon;        
-    public int CreditCost;    
-    public int EnergyCost;        
+    public Sprite CardIcon;
+    public int CreditCost;
+    public int EnergyCost;
     public GameObject BuildingPrefab;
 }
